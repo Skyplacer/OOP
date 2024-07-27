@@ -1,0 +1,16 @@
+Registration Number: IT22347008
+Name : Amarasekara P E 
+Batch Group Number: 6.2
+Project Group Number: SE/OOP/2023/S2/MLB/WD/G118
+
+Contributions worked on:
+
+1. Homepage
+2. Order Medicine Page 
+3. Order List Page
+4. Update Order Page
+5. Order Success Page
+6. Terms and Conditions Page
+7. Admin Control Page
+
+Please note that only the above given pages are accessible on the website launched from my individual web project.

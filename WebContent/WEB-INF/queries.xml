@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	
+	<!-- SQL query to create the OrderMedicine table. -->
+	<query id="create_OrderMedicine_table">
+		<![CDATA[
+			CREATE TABLE OrderMedicine(
+				OrderID varchar(20) NOT NULL,
+				PatientName varchar(50),
+				DeliveryAddress varchar(50),
+				Email varchar(50),
+				ContactNo varchar(15),
+				Prescription varchar(100),
+				PRIMARY KEY (OrderID)
+			);
+		]]>	
+	</query>
+	
+	<!-- SQL query to insert data into the OrderMedicine table. -->
+	<query id="insert_order">
+		<![CDATA[
+			INSERT INTO OrderMedicine(OrderID, PatientName, DeliveryAddress, Email, ContactNo, Prescription)
+			values(?,?,?,?,?,?);
+		]]>	
+	</query>
+	
+	<!-- SQL query to get all OrderIDs from the OrderMedicine table. -->
+	<query id="get_order_ids">
+		<![CDATA[
+			SELECT OrderID FROM OrderMedicine;
+		]]>	
+	</query>
+	
+	<!-- SQL query to get all data from the OrderMedicine table. -->
+	<query id="get_all_orders">
+		<![CDATA[
+			SELECT * FROM OrderMedicine;
+		]]>	
+	</query>
+	
+	<!-- SQL query to get an Order by its ID from the OrderMedicine table. -->
+	<query id="get_order_by_id">
+		<![CDATA[
+			SELECT * FROM OrderMedicine WHERE OrderID = ?;
+		]]>	
+	</query>
+	
+	<!-- SQL query to update an Order in the OrderMedicine table. -->
+	<query id="update_order">
+		<![CDATA[
+			UPDATE OrderMedicine
+			SET PatientName = ?, DeliveryAddress = ?, Email = ?, ContactNo = ?, Prescription = ?
+			WHERE OrderID = ?;
+		]]>	
+	</query>
+	
+	<!-- SQL query to delete an Order from the OrderMedicine table. -->
+	<query id="delete_order">
+		<![CDATA[
+			DELETE FROM OrderMedicine WHERE OrderID = ?;
+		]]>	
+	</query>
+</queries>
